@@ -12,11 +12,5 @@
   ]
 }
 ```
-# Validé par malki
+# Configuration de la stack docker
 
-<<<<<<< HEAD
-ouais ouais ouais
-=======
-### Check de commit
-Alexandre Dufau
-## faut tester
