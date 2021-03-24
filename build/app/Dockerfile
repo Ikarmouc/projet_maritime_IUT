@@ -12,6 +12,8 @@ ENV APP_DOCUMENT_ROOT=${APP_DOCUMENT_ROOT}
 ####### Workdir
 WORKDIR ${APP_DOCUMENT_ROOT}
 
+COPY ./app ./
+
 ####### angular/cli
 RUN npm i -g @angular/cli
 
@@ -22,4 +24,4 @@ RUN npm i
 EXPOSE 4200
 
 ####### Serve the app
-CMD ["ng","serve","--host", "0.0.0.0"]
+CMD ["./startup.sh"]
