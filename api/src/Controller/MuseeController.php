@@ -15,11 +15,11 @@ class MuseeController extends AbstractController
 {
     /**
      * @Rest\View()
-     * @Rest\Get ("/api/imageMusee", name="api_get_imageMusee", methods={"Get"})
+     * @Rest\Get ("/api/imageMusee/{ville}", name="api_get_imageMusee", methods={"Get"})
      */
-    public function getImageMusee(MuseeRepository $repository, SerializerInterface $serializer) : Response
+    public function getImageMusee(MuseeRepository $repository, SerializerInterface $serializer, $ville) : Response
     {
-        $lienImage = "../public/img/musee.jpg";
+        $lienImage = "../public/img/musee$ville.jpg";
         $lienImageJson = $serializer->serialize($lienImage, 'json');
         return new JsonResponse($lienImageJson, 200, [], true);
     }
