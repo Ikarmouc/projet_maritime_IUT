@@ -35,4 +35,16 @@ class MuseeController extends AbstractController
         $horaireOuvertureJson = $serializer->serialize($horaireOuverture, 'json');
         return new JsonResponse($horaireOuvertureJson, 200, [], true);
     }
+
+    /**
+     * @Rest\View()
+     * @Rest\Get ("/api/horaireFermeture/{ville}", name="api_get_horaireFermeture", methods={"Get"})
+     */
+    public function getHoraireFermeture(Request $request, MuseeRepository $repository, SerializerInterface $serializer)
+    {
+        $musee = $repository->findOneBy(array('ville' => $request->get('ville')));
+        $horaireFermeture = $musee->getHoraireFermeture();
+        $horaireFermetureJson = $serializer->serialize($horaireFermeture, 'json');
+        return new JsonResponse($horaireFermetureJson, 200, [], true);
+    }
 }
