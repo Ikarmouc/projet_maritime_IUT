@@ -8,10 +8,6 @@ const routes: Routes = [
     path: '/app/musee/accueil',
     component: MenuBasComponent,
   },
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
-  },
 ];
 
 @NgModule({
