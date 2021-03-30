@@ -1,6 +1,5 @@
-import { environment } from '../../environments/environment';
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import * as mapboxgl from 'mapbox-gl';
+import { Component, OnInit } from '@angular/core';
+import { MapService } from '../map.service';
 
 @Component({
   selector: 'app-map',
@@ -9,25 +8,8 @@ import * as mapboxgl from 'mapbox-gl';
 })
 
 export class MapComponent implements OnInit {
-
-  title = 'Map';
-  map!: mapboxgl.Map;
-  style = 'mapbox://styles/mapbox/streets-v11';
-  lat = 46.1558;
-  lng = -1.1532;
-
-  constructor() { }
-
+  constructor(private map: MapService) { }
   ngOnInit(): void {
-    (mapboxgl as any).accessToken = environment.mapbox.accessToken;
-    this.map = new mapboxgl.Map({
-      container: 'map',
-      style: this.style,
-      zoom: 13,
-      center: [this.lng, this.lat]
-    });
-
-    // Add map controls
-    this.map.addControl(new mapboxgl.NavigationControl());
+    this.map.buildMap();
   }
 }
