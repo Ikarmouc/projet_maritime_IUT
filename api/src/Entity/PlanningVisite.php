@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use App\Repository\PlanningVisiteRepository;
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * @ORM\Entity(repositoryClass=PlanningVisiteRepository::class)
  */
@@ -20,7 +19,7 @@ class PlanningVisite
     /**
      * @ORM\Column(type="date")
      */
-    private $heureDebut;
+    private $heureDebut ;
 
     /**
      * @ORM\Column(type="integer")
@@ -28,7 +27,7 @@ class PlanningVisite
     private $nbPersonneInscrites;
 
     /**
-     * @ORM\Column(type="string", length=8)
+     * @ORM\Column(type="date")
      */
     private $jour;
 
@@ -47,7 +46,7 @@ class PlanningVisite
         return $this->heureDebut;
     }
 
-    public function setHeureDebut(\DateTimeInterface $heureDebut): self
+    public function setHeureDebut(\DateTime $heureDebut): self
     {
         $this->heureDebut = $heureDebut;
 
@@ -66,12 +65,12 @@ class PlanningVisite
         return $this;
     }
 
-    public function getJour(): ?string
+    public function getJour(): ?\DateTimeInterface
     {
         return $this->jour;
     }
 
-    public function setJour(string $jour): self
+    public function setJour(\DateTime $jour): self
     {
         $this->jour = $jour;
 

@@ -18,12 +18,12 @@ class LocalisationBateau
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float")
      */
     private $latitude;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float")
      */
     private $longitude;
 
@@ -90,4 +90,5 @@ class LocalisationBateau
 
         return $this;
     }
+
 }

@@ -2,19 +2,26 @@
 
 namespace App\Controller;
 
+use App\Repository\BateauRepository;
+use App\Repository\HistoireBateauRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use FOS\RestBundle\Controller\Annotations as Rest;
 
 class BateauController extends AbstractController
 {
+
     /**
-     * @Route("/bateau", name="bateau")
+     * @Rest\View()
+     * @Rest\Get ("/api/musee/{bateau_id}", name="ListeTexteTemoignages")
      */
-    public function index(): Response
+    public function ListeTexteTemoignages(HistoireBateauRepository $histoireBateauRepository,BateauRepository $bateauRepository)
     {
-        return $this->render('bateau/index.html.twig', [
-            'controller_name' => 'BateauController',
-        ]);
+
+        $temoignages = $histoireBateauRepository->findBy('bateau_id');
+
+        return JsonResponse($temoignages, 200, [], true);
     }
+
 }
