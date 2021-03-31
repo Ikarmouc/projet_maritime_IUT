@@ -30,7 +30,7 @@ class MeteoController extends AbstractController
 
     /**
      * @Rest\View()
-     * @Rest\Get ("/api/musee/meteo", name="meteo")
+     * @Rest\Get ("/api/meteo", name="meteo")
      */
     public function getTodaysForecast(): Response{
 
@@ -84,7 +84,7 @@ class MeteoController extends AbstractController
 
     /**
      * @Rest\View()
-     * @Rest\Get ("/api/musee/meteo3J", name="meteo3J")
+     * @Rest\Get ("/api/meteo3j", name="meteo3j")
      */
     function getThreeDaysForecast(): Response{
 

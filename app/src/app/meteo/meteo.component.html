@@ -3,7 +3,7 @@
     <fieldset *ngFor="let mydata of forecastData[0]">
       <legend><b>{{mydata.day}}</b></legend>
       <div class="ContenentContainer">
-        <table>
+        <table class="MeteoTable">
           <tr>
             <td>     </td>
             <td><img [src]="mydata.logo" alt="Logo de la météo"></td>

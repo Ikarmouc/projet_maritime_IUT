@@ -3,6 +3,7 @@ body{
   display: flex;
   justify-content: space-between;
 }
+
 fieldset{
   border-radius: 10px;
   font-family: Calibri;
@@ -28,7 +29,6 @@ fieldset:hover{
   font-weight: bold;
 }
 
-
 .MainContainer{
   display: flex;
   justify-content: space-around;
@@ -39,7 +39,6 @@ fieldset:hover{
 
 .ContenentContainer{
 }
-
 
 legend{
   background-color: #30444F;
@@ -63,7 +62,7 @@ td:nth-child(3) {
   text-align: left;
 }
 
-table{
+.MeteoTable{
   margin:0 auto;
   table-layout: fixed;
   width: 100%;
