@@ -16,30 +16,17 @@ use Symfony\Component\HttpFoundation\Request;
 
 class BateauController extends AbstractController
 {
+
     /**
-     * @Rest\View()
-     * @Rest\Get("/api/musee/positionBateaux",
-     *     name="api_map_bateaux")
+     * @Rest\View(serializerGroups={"listeBateaux"})
+     * @Rest\Get("/api/musee/bateau",
+     *     name="api_map_bateau")
      */
 
-    public function getNomBateau(Request $request, BateauRepository $repository, SerializerInterface $serializer){
-        $bateau = $repository->findOneBy(array('id' => $request->get('id')));
-        $nomBateau = $bateau->getNom();
-        $nomBateauJson = $serializer->serialize($nomBateau, 'json');
-        return new JsonResponse($nomBateauJson, 200, [], true);
-    }
-
-    public function getLatitudeBateau(Request $request, LocalisationBateauRepository $repository, SerializerInterface $serializer){
-        $bateau = $repository->findOneBy(array('id' => $request->get('id')));
-        $latitudeBateau = $bateau->getLatitude();
-        $latitudeBateauJson = $serializer->serialize($latitudeBateau, 'json');
-        return new JsonResponse($latitudeBateauJson, 200, [], true);
-    }
-
-    public function getLongitudeBateau(Request $request, LocalisationBateauRepository $repository, SerializerInterface $serializer){
-        $bateau = $repository->findOneBy(array('id' => $request->get('id')));
-        $longitudeBateau = $bateau->getLongitude();
-        $longitudeBateauJson = $serializer->serialize($longitudeBateau, 'json');
-        return new JsonResponse($longitudeBateauJson, 200, [], true);
+    public function listeBateaux( BateauRepository $repository,
+                                  SerializerInterface $serializer){
+        $bateaux = $repository->findAll();
+        $bateauxJson = $serializer->serialize($bateaux, 'json');
+        return new JsonResponse($bateauxJson, 200, [], true);
     }
 }

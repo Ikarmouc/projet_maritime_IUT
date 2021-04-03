@@ -6,6 +6,7 @@ use App\Repository\BateauRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=BateauRepository::class)
@@ -14,7 +15,6 @@ class Bateau
 {
     /**
      * @ORM\Id
-     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
     private $id;
@@ -40,17 +40,17 @@ class Bateau
     private $prixAchat;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float")
      */
     private $longueur;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float")
      */
     private $largeur;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float")
      */
     private $poids;
 
@@ -79,6 +79,19 @@ class Bateau
      */
     private $musee;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Groups("temoignage")
+     */
+    private $temoignageAudio;
+
+    /**
+     * @ORM\Column(type="text")
+     * @Groups("temoignage")
+     */
+    private $temoignageTexte;
+
+
     public function __construct()
     {
         $this->planningVisites = new ArrayCollection();
@@ -87,6 +100,12 @@ class Bateau
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function setId($id): self
+    {
+        $this->id = $id;
+        return $this;
     }
 
     public function getNom(): ?string
@@ -258,6 +277,29 @@ class Bateau
     {
         $this->musee = $musee;
 
+        return $this;
+    }
+
+
+    public function getTemoignageAudio(): ?string
+    {
+        return $this->temoignageAudio;
+    }
+
+    public function setTemoignageAudio(string $temoignageAudioAdd): self
+    {
+        $this->temoignageAudio = $temoignageAudioAdd;
+        return $this;
+    }
+
+    public function getTemoignageTexte(): ?string
+    {
+        return $this->temoignageAudio;
+    }
+
+    public function setTemoignageTexte(string $temoignageTexteAdd): self
+    {
+        $this->temoignageTexte = $temoignageTexteAdd;
         return $this;
     }
 }
