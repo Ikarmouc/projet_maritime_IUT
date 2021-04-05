@@ -19,6 +19,16 @@ class MuseeRepository extends ServiceEntityRepository
         parent::__construct($registry, Musee::class);
     }
 
+    public function findOneById($value): ?Musee
+    {
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.id = :val')
+            ->setParameter('val', $value)
+            ->getQuery()
+            ->getOneOrNullResult()
+            ;
+    }
+
     // /**
     //  * @return Musee[] Returns an array of Musee objects
     //  */
