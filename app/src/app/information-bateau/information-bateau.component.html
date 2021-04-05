@@ -10,7 +10,7 @@
         <h1 class="my-4" style="display: flex;justify-content: center">
           <small></small>{{dataBateau.nom}}
         </h1>
-        <div class="container-fliud">
+        <div class="container-fluid">
           <div class="wrapper row">
 
             <div class="preview col-md-6">
@@ -23,7 +23,7 @@
             <div class="details col-md-6">
 
                 <div class="" id="informations_bateau">
-                  <h3 class="my-3">Informations du Bateau </h3>
+                  <h3 class="my-3" >Informations du Bateau </h3>
                   <p> Type : {{dataBateau.type}}</p>
                   <p> Materiau  : {{dataBateau.materiau}}</p>
                   <p> Prix achat : {{dataBateau.prixAchat}}  €</p>
@@ -39,9 +39,9 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="text-black p-2 rounded" id="historique_bateau" style="margin-top: 4%;background-color: #eeeeee; " *ngFor="let histoire of dataHistorique[0]">
-        <h3 class="my-3">L'historique du bateau </h3>
+    <div class="container-fluid" id="content">
+      <div class="text-black p-2 rounded"  style="margin-top: 4%;background-color: #eeeeee; " *ngFor="let histoire of dataHistorique[0]">
+        <h3 class="my-3" id="title">L'historique du bateau </h3>
         <div style="display: flex; flex-direction: column; border-radius: 2px;border-color: black">
           <p>Année lancement : {{histoire.anneeLancement.slice(0, 4)}}</p>
           <p>Constructeur : {{histoire.constructeur}}</p>
@@ -53,9 +53,9 @@
         </div>
       </div>
 
-      <div class="text-black p-2 rounded" id="Temoignage_bateau" style="margin-top: 4%;background-color: #eeeeee;" *ngFor="let temoignage of dataTemoignage[0]" >
-        <h3 class="my-3">Temoignage</h3>
-        <div style="display: flex; flex-direction: column; border-radius: 2px;border-color: black">
+      <div class="container-fluid" id="Temoignage_bateau" style="margin-top: 4%;background-color: #eeeeee;" *ngFor="let temoignage of dataTemoignage[0]" >
+        <h3 class="my-3" id="title">Temoignage</h3>
+        <div style="display: flex; flex-direction: column; border-radius: 2px;border-color: black;">
           <p>Temoignage : <br>{{temoignage.temoignageTexte}}</p>
           <audio controls preload="auto" src="{{ temoignage.temoignageAudio }}.mp3" style="display: flex; align-self: center;"> </audio>
         </div>
