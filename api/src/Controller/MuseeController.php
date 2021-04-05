@@ -8,13 +8,5 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MuseeController extends AbstractController
 {
-    /**
-     * @Route("/musee", name="musee")
-     */
-    public function index(): Response
-    {
-        return $this->render('musee/index.html.twig', [
-            'controller_name' => 'MuseeController',
-        ]);
-    }
+
 }
