@@ -14,37 +14,46 @@ use Symfony\Component\HttpFoundation\Request;
 class MuseeController extends AbstractController
 {
     /**
-     * @Rest\View()
-     * @Rest\Get ("/api/imageMusee/{ville}", name="api_get_imageMusee", methods={"Get"})
+     * @Rest\View(serializerGroups={})
+     * @Rest\Get ("/api/musee/image", name="api_get_imageMusee")
      */
-    public function getImageMusee(MuseeRepository $repository, SerializerInterface $serializer, $ville) : Response
+    public function getImageMusee (MuseeRepository $repository)
     {
-        $lienImage = "../public/img/musee$ville.jpg";
-        $lienImageJson = $serializer->serialize($lienImage, 'json');
-        return new JsonResponse($lienImageJson, 200, [], true);
+        $musee = $repository->findOneById(1);
+        $image = $musee->getImage();
+        return $image;
     }
 
     /**
      * @Rest\View()
-     * @Rest\Get ("/api/horaireOuverture/{ville}", name="api_get_horaireOuverture", methods={"Get"})
+     * @Rest\Get ("/api/musee/horaireOuverture/", name="api_get_horaireOuverture")
      */
-    public function getHoraireOuverture(Request $request, MuseeRepository $repository, SerializerInterface $serializer)
+    public function getHoraireOuverture(MuseeRepository $repository)
     {
-        $musee = $repository->findOneBy(array('ville' => $request->get('ville')));
+        $musee = $repository->findOneById(1);
         $horaireOuverture = $musee->getHoraireOuverture();
-        $horaireOuvertureJson = $serializer->serialize($horaireOuverture, 'json');
-        return new JsonResponse($horaireOuvertureJson, 200, [], true);
+        return $horaireOuverture;
     }
 
     /**
      * @Rest\View()
-     * @Rest\Get ("/api/horaireFermeture/{ville}", name="api_get_horaireFermeture", methods={"Get"})
+     * @Rest\Get ("/api/musee/horaireFermeture/", name="api_get_horaireFermeture")
      */
-    public function getHoraireFermeture(Request $request, MuseeRepository $repository, SerializerInterface $serializer)
+    public function getHoraireFermeture(MuseeRepository $repository)
     {
-        $musee = $repository->findOneBy(array('ville' => $request->get('ville')));
+        $musee = $repository->findOneById(1);
         $horaireFermeture = $musee->getHoraireFermeture();
-        $horaireFermetureJson = $serializer->serialize($horaireFermeture, 'json');
-        return new JsonResponse($horaireFermetureJson, 200, [], true);
+        return $horaireFermeture;
+    }
+
+    /**
+     * @Rest\View()
+     * @Rest\Get ("/api/musee/joursFermeture/", name="api_get_joursFermeture")
+     */
+    public function getJoursFermeture(MuseeRepository $repository)
+    {
+        $musee = $repository->findOneById(1);
+        $joursFermeture = $musee->getJoursFermeture();
+        return $joursFermeture;
     }
 }
