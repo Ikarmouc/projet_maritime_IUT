@@ -156,7 +156,6 @@ class HistoireBateau
         return $this;
     }
 
-
     public function getBateau(): ?Bateau
     {
         return $this->Bateau;
