@@ -10,6 +10,7 @@ import { MenuBasComponent } from './menu-bas/menu-bas.component';
   declarations: [
     AppComponent,
     InformationBateauComponent,
+    MenuBasComponent,
   ],
   imports: [
     BrowserModule,
