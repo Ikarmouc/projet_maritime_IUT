@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\LocalisationBateauRepository;
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\Types\This;
 
 /**
  * @ORM\Entity(repositoryClass=LocalisationBateauRepository::class)
@@ -12,7 +13,6 @@ class LocalisationBateau
 {
     /**
      * @ORM\Id
-     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
     private $id;
@@ -41,6 +41,12 @@ class LocalisationBateau
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function setId($id): self
+    {
+        $this->id = $id;
+        return $this;
     }
 
     public function getLatitude(): ?int

@@ -1,1 +1,77 @@
-<p>information-bateau works!</p>
+<!-- Page Content -->
+<div class="container">
+
+  <fieldset *ngFor="let dataBateau of dataBateau[0]">
+
+
+
+    <div class="container">
+      <div class="card">
+        <h1 class="my-4" style="display: flex;justify-content: center">
+          <small></small>{{dataBateau.nom}}
+        </h1>
+        <div class="container-fliud">
+          <div class="wrapper row">
+
+            <div class="preview col-md-6">
+
+
+              <div class="preview-pic tab-content">
+                <div class="tab-pane active"><img src="{{'assets/img/img_bateau' + dataBateau.id + '.jpg'}}" /></div>
+              </div>
+            </div>
+            <div class="details col-md-6">
+
+                <div class="" id="informations_bateau">
+                  <h3 class="my-3">Informations du Bateau </h3>
+                  <p> Type : {{dataBateau.type}}</p>
+                  <p> Materiau  : {{dataBateau.materiau}}</p>
+                  <p> Prix achat : {{dataBateau.prixAchat}}  €</p>
+                  <p> Poids : {{dataBateau.poids}}</p>
+                  <p> Longueur : {{dataBateau.longueur}}</p>
+                  <p> Largeur : {{dataBateau.largeur}}</p>
+                  <p> Capacité personnes : {{dataBateau.capacitePersonne}}</p>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="text-black p-2 rounded" id="historique_bateau" style="margin-top: 4%;background-color: #eeeeee; " *ngFor="let histoire of dataHistorique[0]">
+        <h3 class="my-3">L'historique du bateau </h3>
+        <div style="display: flex; flex-direction: column; border-radius: 2px;border-color: black">
+          <p>Année lancement : {{histoire.anneeLancement.slice(0, 4)}}</p>
+          <p>Constructeur : {{histoire.constructeur}}</p>
+          <p>Propriétaire : {{histoire.proprietaire}}</p>
+          <p>Année entree collection : {{histoire.anneeEntreeCollection.slice(0, 4)}}</p>
+          <p>Date monument historique : {{histoire.dateMonumentHistorique.slice(8, 10)}}/{{histoire.dateMonumentHistorique.slice(5, 7)}}/{{histoire.dateMonumentHistorique.slice(0, 4)}}</p>
+          <p>Année restauration : {{histoire.anneeRestauration.slice(0, 4)}}</p>
+          <p>Historique du bateau : <br> {{histoire.historique}}</p>
+        </div>
+      </div>
+
+      <div class="text-black p-2 rounded" id="Temoignage_bateau" style="margin-top: 4%;background-color: #eeeeee;" *ngFor="let temoignage of dataTemoignage[0]" >
+        <h3 class="my-3">Temoignage</h3>
+        <div style="display: flex; flex-direction: column; border-radius: 2px;border-color: black">
+          <p>Temoignage : <br>{{temoignage.temoignageTexte}}</p>
+          <audio controls preload="auto" src="{{ temoignage.temoignageAudio }}.mp3" style="display: flex; align-self: center;"> </audio>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- /.row -->
+
+
+
+  </fieldset>
+  <!-- Portfolio Item Heading -->
+  <!-- Portfolio Item Row -->
+
+  <!-- /.row -->
+
+</div>

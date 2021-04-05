@@ -16,7 +16,6 @@ class HistoireBateau
 {
     /**
      * @ORM\Id
-     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
     private $id;
@@ -57,11 +56,6 @@ class HistoireBateau
     private $historique;
 
     /**
-     * @ORM\Column(type="array")
-     */
-    private $temoignage = array();
-
-    /**
      * @ORM\OneToOne(targetEntity=Bateau::class, inversedBy="histoireBateau", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
@@ -70,6 +64,12 @@ class HistoireBateau
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function setId(int $id) : self
+    {
+        $this->id= $id;
+        return $this;
     }
 
     public function getAnneeLancement(): ?\DateTimeInterface
@@ -156,17 +156,6 @@ class HistoireBateau
         return $this;
     }
 
-    public function getTemoignage(): ?string
-    {
-        return $this->temoignage;
-    }
-
-    public function setTemoignage(string $temoignageAdd): self
-    {
-        $this->temoignage = new ArrayCollection();
-
-        return $this;
-    }
 
     public function getBateau(): ?Bateau
     {
@@ -179,4 +168,7 @@ class HistoireBateau
 
         return $this;
     }
+
+
+
 }
