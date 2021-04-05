@@ -2,9 +2,11 @@
 
 namespace App\Repository;
 
+use App\Domain\HistoriqueBateaux;
 use App\Entity\HistoireBateau;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use APP\Repository\BateauRepository;
 
 /**
  * @method HistoireBateau|null find($id, $lockMode = null, $lockVersion = null)
@@ -12,12 +14,25 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method HistoireBateau[]    findAll()
  * @method HistoireBateau[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class HistoireBateauRepository extends ServiceEntityRepository
+class HistoireBateauRepository extends ServiceEntityRepository implements HistoriqueBateaux
 {
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, HistoireBateau::class);
     }
+
+    public function getHistoriqueBateauById($value) : iterable
+    {
+
+        $query = $this->createQueryBuilder('hB')
+            ->select("hB.id","hB.anneeLancement","hB.constructeur","hB.proprietaire","hB.anneeEntreeCollection","hB.dateMonumentHistorique","hB.anneeRestauration","hB.historique")
+            ->andWhere('hB.id = :val')
+            ->setParameter('val', $value)
+            ->orderBy('hB.id', 'ASC')
+            ->getQuery();
+        return $query->getResult();
+    }
+
 
     // /**
     //  * @return HistoireBateau[] Returns an array of HistoireBateau objects

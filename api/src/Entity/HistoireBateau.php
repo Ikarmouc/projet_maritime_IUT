@@ -3,7 +3,11 @@
 namespace App\Entity;
 
 use App\Repository\HistoireBateauRepository;
+use Cassandra\Date;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\Types\Array_;
+use function Sodium\add;
 
 /**
  * @ORM\Entity(repositoryClass=HistoireBateauRepository::class)
@@ -12,7 +16,6 @@ class HistoireBateau
 {
     /**
      * @ORM\Id
-     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
     private $id;
@@ -33,7 +36,7 @@ class HistoireBateau
     private $proprietaire;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="date")
      */
     private $anneeEntreeCollection;
 
@@ -48,14 +51,9 @@ class HistoireBateau
     private $anneeRestauration;
 
     /**
-     * @ORM\Column(type="array")
+     * @ORM\Column(type="text")
      */
     private $historique;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $temoignage;
 
     /**
      * @ORM\OneToOne(targetEntity=Bateau::class, inversedBy="histoireBateau", cascade={"persist", "remove"})
@@ -68,12 +66,18 @@ class HistoireBateau
         return $this->id;
     }
 
-    public function getAnneeLancement(): ?int
+    public function setId(int $id) : self
+    {
+        $this->id= $id;
+        return $this;
+    }
+
+    public function getAnneeLancement(): ?\DateTimeInterface
     {
         return $this->anneeLancement;
     }
 
-    public function setAnneeLancement(int $anneeLancement): self
+    public function setAnneeLancement(\DateTime $anneeLancement): self
     {
         $this->anneeLancement = $anneeLancement;
 
@@ -104,36 +108,36 @@ class HistoireBateau
         return $this;
     }
 
-    public function getAnneeEntreeCollection(): ?int
+    public function getAnneeEntreeCollection(): ?\DateTimeInterface
     {
         return $this->anneeEntreeCollection;
     }
 
-    public function setAnneeEntreeCollection(int $anneeEntreeCollection): self
+    public function setAnneeEntreeCollection(\DateTime $anneeEntreeCollection): self
     {
         $this->anneeEntreeCollection = $anneeEntreeCollection;
 
         return $this;
     }
 
-    public function getDateMonumentHistorique(): ?string
+    public function getDateMonumentHistorique(): ?\DateTimeInterface
     {
         return $this->dateMonumentHistorique;
     }
 
-    public function setDateMonumentHistorique(string $dateMonumentHistorique): self
+    public function setDateMonumentHistorique(\DateTime $dateMonumentHistorique): self
     {
         $this->dateMonumentHistorique = $dateMonumentHistorique;
 
         return $this;
     }
 
-    public function getAnneeRestauration(): ?int
+    public function getAnneeRestauration(): ?\DateTimeInterface
     {
         return $this->anneeRestauration;
     }
 
-    public function setAnneeRestauration(int $anneeRestauration): self
+    public function setAnneeRestauration(\DateTime $anneeRestauration): self
     {
         $this->anneeRestauration = $anneeRestauration;
 
@@ -152,17 +156,6 @@ class HistoireBateau
         return $this;
     }
 
-    public function getTemoignage(): ?string
-    {
-        return $this->temoignage;
-    }
-
-    public function setTemoignage(string $temoignage): self
-    {
-        $this->temoignage = $temoignage;
-
-        return $this;
-    }
 
     public function getBateau(): ?Bateau
     {
@@ -175,4 +168,7 @@ class HistoireBateau
 
         return $this;
     }
+
+
+
 }
