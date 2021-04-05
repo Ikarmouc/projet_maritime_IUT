@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "c59785de1c0c84db446b4d07feb4c38c",
+=======
+    "content-hash": "9baa171460d8077d14e659cb55654357",
+>>>>>>> f7b543cb455fa4c9d6aac8d4ea7a1232a6afe79b
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -557,6 +561,7 @@
         },
         {
             "name": "doctrine/doctrine-bundle",
+<<<<<<< HEAD
             "version": "2.2.0",
             "source": {
                 "type": "git",
@@ -567,6 +572,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/c1b1fe95a6cce5e53a1454c46ae3500e53fadae1",
                 "reference": "c1b1fe95a6cce5e53a1454c46ae3500e53fadae1",
+=======
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/DoctrineBundle.git",
+                "reference": "8b922578bdee2243a26202b13df795e170efaef8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/8b922578bdee2243a26202b13df795e170efaef8",
+                "reference": "8b922578bdee2243a26202b13df795e170efaef8",
+>>>>>>> f7b543cb455fa4c9d6aac8d4ea7a1232a6afe79b
                 "shasum": ""
             },
             "require": {
@@ -647,7 +664,11 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/DoctrineBundle/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/doctrine/DoctrineBundle/tree/2.2.0"
+=======
+                "source": "https://github.com/doctrine/DoctrineBundle/tree/2.3.0"
+>>>>>>> f7b543cb455fa4c9d6aac8d4ea7a1232a6afe79b
             },
             "funding": [
                 {
@@ -663,7 +684,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2020-11-07T16:32:32+00:00"
+=======
+            "time": "2021-03-16T16:24:04+00:00"
+>>>>>>> f7b543cb455fa4c9d6aac8d4ea7a1232a6afe79b
         },
         {
             "name": "doctrine/doctrine-migrations-bundle",
@@ -2094,8 +2119,74 @@
             "time": "2021-02-25T21:54:58+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "laravel/tinker",
             "version": "v2.6.1",
+=======
+            "name": "nelmio/cors-bundle",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nelmio/NelmioCorsBundle.git",
+                "reference": "be4d5824caebc86da9e224e935e02e1201b3ea54"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nelmio/NelmioCorsBundle/zipball/be4d5824caebc86da9e224e935e02e1201b3ea54",
+                "reference": "be4d5824caebc86da9e224e935e02e1201b3ea54",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/framework-bundle": "^4.3 || ^5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.2",
+                "symfony/phpunit-bridge": "^4.3 || ^5.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nelmio\\CorsBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nelmio",
+                    "homepage": "http://nelm.io"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/nelmio/NelmioCorsBundle/contributors"
+                }
+            ],
+            "description": "Adds CORS (Cross-Origin Resource Sharing) headers support in your Symfony application",
+            "keywords": [
+                "api",
+                "cors",
+                "crossdomain"
+            ],
+            "support": {
+                "issues": "https://github.com/nelmio/NelmioCorsBundle/issues",
+                "source": "https://github.com/nelmio/NelmioCorsBundle/tree/2.1.0"
+            },
+            "time": "2020-07-22T11:44:28+00:00"
+        },
+        {
+            "name": "phpdocumentor/reflection-common",
+            "version": "2.2.0",
+>>>>>>> f7b543cb455fa4c9d6aac8d4ea7a1232a6afe79b
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/tinker.git",
@@ -2852,6 +2943,84 @@
                 "source": "https://github.com/bobthecow/psysh/tree/v0.10.7"
             },
             "time": "2021-03-14T02:14:56+00:00"
+        },
+        {
+            "name": "sensio/framework-extra-bundle",
+            "version": "v6.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
+                "reference": "8ef75e99f20332f2725587896364f7079b53de95"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/8ef75e99f20332f2725587896364f7079b53de95",
+                "reference": "8ef75e99f20332f2725587896364f7079b53de95",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "^1.0",
+                "php": ">=7.2.5",
+                "symfony/config": "^4.4|^5.0",
+                "symfony/dependency-injection": "^4.4|^5.0",
+                "symfony/framework-bundle": "^4.4|^5.0",
+                "symfony/http-kernel": "^4.4|^5.0"
+            },
+            "conflict": {
+                "doctrine/doctrine-cache-bundle": "<1.3.1",
+                "doctrine/persistence": "<1.3"
+            },
+            "require-dev": {
+                "doctrine/dbal": "^2.10|^3.0",
+                "doctrine/doctrine-bundle": "^1.11|^2.0",
+                "doctrine/orm": "^2.5",
+                "symfony/browser-kit": "^4.4|^5.0",
+                "symfony/doctrine-bridge": "^4.4|^5.0",
+                "symfony/dom-crawler": "^4.4|^5.0",
+                "symfony/expression-language": "^4.4|^5.0",
+                "symfony/finder": "^4.4|^5.0",
+                "symfony/monolog-bridge": "^4.0|^5.0",
+                "symfony/monolog-bundle": "^3.2",
+                "symfony/phpunit-bridge": "^4.4.9|^5.0.9",
+                "symfony/security-bundle": "^4.4|^5.0",
+                "symfony/twig-bundle": "^4.4|^5.0",
+                "symfony/yaml": "^4.4|^5.0",
+                "twig/twig": "^1.34|^2.4|^3.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sensio\\Bundle\\FrameworkExtraBundle\\": "src/"
+                },
+                "exclude-from-classmap": [
+                    "/tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "This bundle provides a way to configure your controllers with annotations",
+            "keywords": [
+                "annotations",
+                "controllers"
+            ],
+            "support": {
+                "issues": "https://github.com/sensiolabs/SensioFrameworkExtraBundle/issues",
+                "source": "https://github.com/sensiolabs/SensioFrameworkExtraBundle/tree/v6.1.1"
+            },
+            "time": "2021-02-23T11:50:58+00:00"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -5650,6 +5819,7 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/string/tree/v5.2.4"
+<<<<<<< HEAD
             },
             "funding": [
                 {
@@ -5743,6 +5913,8 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/translation/tree/v5.2.5"
+=======
+>>>>>>> f7b543cb455fa4c9d6aac8d4ea7a1232a6afe79b
             },
             "funding": [
                 {
@@ -5758,7 +5930,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2021-03-06T07:59:01+00:00"
+=======
+            "time": "2021-02-16T10:20:28+00:00"
+>>>>>>> f7b543cb455fa4c9d6aac8d4ea7a1232a6afe79b
         },
         {
             "name": "symfony/translation-contracts",
@@ -6751,6 +6927,7 @@
         },
         {
             "name": "symfony/maker-bundle",
+<<<<<<< HEAD
             "version": "v1.29.0",
             "source": {
                 "type": "git",
@@ -6761,32 +6938,44 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/9a9e3f4253ca0d923ad49b327db6f89a8f74fe4c",
                 "reference": "9a9e3f4253ca0d923ad49b327db6f89a8f74fe4c",
+=======
+            "version": "v1.30.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/maker-bundle.git",
+                "reference": "a9ff8a8600b6354d79fd16c72c24757dcb086c3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/a9ff8a8600b6354d79fd16c72c24757dcb086c3c",
+                "reference": "a9ff8a8600b6354d79fd16c72c24757dcb086c3c",
+>>>>>>> f7b543cb455fa4c9d6aac8d4ea7a1232a6afe79b
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "^1.2|^2.0",
                 "nikic/php-parser": "^4.0",
                 "php": ">=7.1.3",
-                "symfony/config": "^3.4|^4.0|^5.0",
-                "symfony/console": "^3.4|^4.0|^5.0",
-                "symfony/dependency-injection": "^3.4|^4.0|^5.0",
+                "symfony/config": "^4.0|^5.0",
+                "symfony/console": "^4.0|^5.0",
+                "symfony/dependency-injection": "^4.0|^5.0",
                 "symfony/deprecation-contracts": "^2.2",
-                "symfony/filesystem": "^3.4|^4.0|^5.0",
-                "symfony/finder": "^3.4|^4.0|^5.0",
-                "symfony/framework-bundle": "^3.4|^4.0|^5.0",
-                "symfony/http-kernel": "^3.4|^4.0|^5.0"
+                "symfony/filesystem": "^4.0|^5.0",
+                "symfony/finder": "^4.0|^5.0",
+                "symfony/framework-bundle": "^4.0|^5.0",
+                "symfony/http-kernel": "^4.0|^5.0"
             },
             "require-dev": {
                 "composer/semver": "^3.0@dev",
                 "doctrine/doctrine-bundle": "^1.8|^2.0",
                 "doctrine/orm": "^2.3",
                 "friendsofphp/php-cs-fixer": "^2.8",
-                "friendsoftwig/twigcs": "^3.1.2",
+                "friendsoftwig/twigcs": "^4.1.0|^5.0.0",
                 "symfony/http-client": "^4.3|^5.0",
                 "symfony/phpunit-bridge": "^4.3|^5.0",
-                "symfony/process": "^3.4|^4.0|^5.0",
-                "symfony/security-core": "^3.4|^4.0|^5.0",
-                "symfony/yaml": "^3.4|^4.0|^5.0"
+                "symfony/process": "^4.0|^5.0",
+                "symfony/security-core": "^4.0|^5.0",
+                "symfony/yaml": "^4.0|^5.0"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -6819,7 +7008,11 @@
             ],
             "support": {
                 "issues": "https://github.com/symfony/maker-bundle/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/maker-bundle/tree/v1.29.0"
+=======
+                "source": "https://github.com/symfony/maker-bundle/tree/v1.30.0"
+>>>>>>> f7b543cb455fa4c9d6aac8d4ea7a1232a6afe79b
             },
             "funding": [
                 {
@@ -6835,7 +7028,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2021-02-07T01:02:28+00:00"
+=======
+            "time": "2021-03-19T18:32:22+00:00"
+>>>>>>> f7b543cb455fa4c9d6aac8d4ea7a1232a6afe79b
         }
     ],
     "aliases": [],

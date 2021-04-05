@@ -13,7 +13,10 @@
         "doctrine/doctrine-migrations-bundle": "^3.0",
         "doctrine/orm": "^2.8",
         "friendsofsymfony/rest-bundle": "^3.0",
+<<<<<<< HEAD
         "laravel/tinker": "^2.6",
+=======
+>>>>>>> f7b543cb455fa4c9d6aac8d4ea7a1232a6afe79b
         "nelmio/cors-bundle": "^2.1",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^6.1",
