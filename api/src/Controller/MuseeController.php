@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class MuseeController extends AbstractController
 {
+
     /**
      * @Rest\View(serializerGroups={})
      * @Rest\Get ("/api/musee/image", name="api_get_imageMusee")
