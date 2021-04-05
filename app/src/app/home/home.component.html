@@ -1,9 +1,11 @@
-
 <header>
-  <img src = "/src/asset/img/{{ imageMusee }}" alt ="/src/asset/img/{{ imageMusee }}">
-  <h2>bassin à flot histoire et témoignages</h2>
+  <img src = "assets/img/{{ imageMusee }}" alt ="assets/img/{{ imageMusee }}">
+  <h1 class="centre">bassin à flot histoire et témoignages</h1>
 </header>
 
-<div>
-  <h4>Infos pratiques</h4>
+<div class="horaires centre">
+  <h2>Infos pratiques</h2>
+  <p>Votre musee est ouvert de {{ horaireOuverture }}h à {{ horaireFermeture }}h</p>
+  <p>jours de fermeture :</p>
+  <p>{{ joursFermeture }}</p>
 </div>

@@ -1,0 +1,22 @@
+img {
+  max-height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centre {
+  text-align: center;
+}
+
+h1 {
+  background-color: royalblue;
+  padding: 50px;
+  color: springgreen;
+}
+.horaires {
+  margin: auto;
+  max-width: 400px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
