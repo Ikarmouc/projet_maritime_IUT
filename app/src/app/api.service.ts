@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Musee } from './model/musee.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
