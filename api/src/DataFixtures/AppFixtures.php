@@ -9,7 +9,6 @@ use App\Entity\Musee;
 use App\Entity\PlanningVisite;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
-use App\Entity\Musee;
 
 class AppFixtures extends Fixture
 {

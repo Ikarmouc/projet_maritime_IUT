@@ -10,15 +10,20 @@ img {
 }
 
 h1 {
-  background-color: #1c2c54;
+  background-color: #2d3c61;
   padding: 50px;
   color: white;
   margin-top: 0px;
-  font-size: 300%;
+  font-size: 250%;
 }
+
 .horaires {
   margin: auto;
   max-width: 400px;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 10px;
+}
+
+.white {
+  color: white;
 }
