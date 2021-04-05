@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { InformationBateauComponent } from './information-bateau/information-bateau.component';
 import { MenuBasComponent } from './menu-bas/menu-bas.component';
 import { MeteoComponent } from './meteo/meteo.component';
+import { ListeBateauComponent } from './liste-bateau/liste-bateau.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MeteoComponent } from './meteo/meteo.component';
     MapComponent,
     InformationBateauComponent,
     HomeComponent,
-    MenuBasComponent
+    MenuBasComponent,
+    ListeBateauComponent
   ],
   imports: [
     BrowserModule,
