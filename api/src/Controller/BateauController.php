@@ -39,7 +39,7 @@ class BateauController extends AbstractController
                                   SerializerInterface $serializer)
     {
         $bateaux = $repository->findAll();
-        $bateauxJson = $serializer->serialize($bateaux, 'json');
+        $bateauxJson = $serializer->serialize($bateaux, 'json', ['groups' => ['listeBateaux']]);
         return new JsonResponse($bateauxJson, 200, [], true);
     }
 
