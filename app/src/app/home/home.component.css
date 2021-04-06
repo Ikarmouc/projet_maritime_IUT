@@ -49,19 +49,6 @@ fieldset{
   border: solid 4px #30444F;
 }
 
-fieldset:hover legend{
-  border: solid #24478f 4px;
-  background-color: #24478f;
-  font-size: large;
-  font-weight: bold;
-}
-
-fieldset:hover{
-  border: solid #24478f 4px;
-  font-size: large;
-  font-weight: bold;
-}
-
 .MainContainer{
   display: flex;
   justify-content: space-around;
