@@ -167,7 +167,4 @@ class HistoireBateau
 
         return $this;
     }
-
-
-
 }
