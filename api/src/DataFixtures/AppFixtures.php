@@ -19,7 +19,8 @@ class AppFixtures extends Fixture
         $musee = new Musee();
         $musee->setId(1);
         $musee->setAddresse("Place Bernard Moitessier");
-        $musee->setVille("LaRochelle");
+        $musee->setVille("La rochelle");
+        $musee->setImage("./assets/img/museeLaRochelle.jpg");
         $musee->setJoursFermeture("Covid -> fermé jusqu'a nouvel ordre");
         $musee->setHoraireOuverture(9);
         $musee->setHoraireFermeture(23);
@@ -38,7 +39,7 @@ class AppFixtures extends Fixture
         $bateau1->setLargeur(12.5);
         $bateau1->setPoids(1381);
         $bateau1->setCapacitePersonne(10);
-        $bateau1->setTemoignageAudio("./public/Audio/temoignageBateau1");
+        $bateau1->setTemoignageAudio("./assets/Audio/temoignageBateau1");
         $bateau1->setTemoignageTexte("C’est à cette fonction que j’ai navigué sur le France 1. J’ai fait trois points sur la frégate, le point A, le point  J et le point K. Le plus mouvementé fut sûrement le Point K. Nous avons eu 18 mètres de creux et 200 kms heure de vent pendant 27 jours, des coups de gite de plus de 30°jusqu’à avoir une fois 43° je me demande encore aujourd’hui comment on s’est redressé, car à la passerelle, on ne devait pas rigoler pour tenir la barre. Mais bon ... On n’y pensait pas, on marchait plus sur les cloisons que sur le sol des coursives.  Nos chaussures laissaient des marques jusque 50cm au dessus du parquet ! Inutile de nettoyer …le lendemain il y en avait autant ! Donc, on attendait La Pallice pour tout remettre en état. Pour servir à table, pas de problèmes. Par temps calme, je marchais sur le parquet en lino. Celui-ci était un vrai miroir tellement on le faisait briller. Cela nous aidait quand il y avait du mauvais temps ! Ca vous intrigue ? Je vais vous expliquer !  Quand il y avait de la gîte et du tangage,  je me mettais sur le pas de la porte du carré avec mes plats. Le gars qui voulait remplir son assiette m’attrapait par la ceinture, je me bloquais entre deux chaises et  je le servais.  Je passais au suivant de la même manière, et je faisais de même avec  les gars qui étaient dans le sens du tangage, je passais d’une table à l’autre, en glissant d’un bout à l’autre du carré. Et c’était comme ça si souvent  que cela ne nous frappait pas plus que ça !");
         $manager->persist($bateau1);
         $manager->persist($bateau1);
@@ -115,6 +116,7 @@ class AppFixtures extends Fixture
         $planningVisite2->setJour(\DateTime::createFromFormat('d/m/Y','23/03/2021'));
         $planningVisite2->setBateau($bateau2);
         $planningVisite2->setNbPersonneInscrites(5);
+
 
         $manager->flush();
     }

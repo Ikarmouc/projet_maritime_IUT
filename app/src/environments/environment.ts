@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
+  mapbox: {
+    accessToken: 'pk.eyJ1IjoiZW56b25hdWxsZXQiLCJhIjoiY2ttbjUydGhwMXJwYjJwcWt3c2VzNjY5byJ9.Qf45dMq7o6uhF7w-Ha8qRw',
   API_URL: 'http://localhost:9999',
+  }
 };
 
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, NgModule, OnInit} from '@angular/core';
 import {InformationBateauxService} from './information-bateaux.service';
 import {ActivatedRoute} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
@@ -11,7 +11,6 @@ import {HistoireBateau} from '../../Model/HistoireBateau.model';
   templateUrl: './information-bateau.component.html',
   styleUrls: ['./information-bateau.component.css']
 })
-
 
 export class InformationBateauComponent implements OnInit {
   public dataTemoignage: Array<any> = [];
