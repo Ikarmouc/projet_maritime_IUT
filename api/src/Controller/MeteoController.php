@@ -79,7 +79,11 @@ class MeteoController extends AbstractController
 
         $entityManager->flush();
 
-        return new Response('Saved forecast for :'.$meteo_0->getJour());
+        $values = ['day'=>$forecastDay, 'temp'=>$forecastCurrentTemp, 'wind_speed'=>$forecastWindSpeed, 'humidity'=>$forecastHumidity, 'logo'=>$forecastIcon, 'temp_min'=>$forecastMinTemp, 'temp_max'=>$forecastMaxTemp, 'desc'=>$forecastDescription, 'temp_feels_like'=>$forecastFeelsLikeTemp];
+
+        $valuesJson = json_encode($values);
+
+        return new Response($valuesJson,Response::HTTP_OK);
     }
 
     /**

@@ -1,12 +1,71 @@
-<!--<div >
+<div >
   <img src = "assets/img/{{ imageMusee }}" alt ="assets/img/{{ imageMusee }}">
   <h1 class="centre">bassin à flot histoire et témoignages</h1>
 </div>
--->
+
 <div class="horaires centre">
   <h2 class="white">Infos pratiques</h2>
-  <p class="white">Votre musee est ouvert de {{ horaireOuverture }}h à {{ horaireFermeture }}h</p>
-  <p class="white">jours de fermeture :</p>
-  <p class="white">{{ joursFermeture }}</p>
+
+
+  <div class="contentInfos">
+
+    <div>
+      <p>Votre musee est ouvert de {{ horaireOuverture }}h à {{ horaireFermeture }}h</p>
+      <p>jours de fermeture :</p>
+      <p>{{ joursFermeture }}</p>
+    </div>
+
+    <div>
+      <legend><b>Météo du jour</b></legend>
+      <div class="ContenentContainer">
+        <table class="MeteoTable">
+          <tr>
+            <td>     </td>
+            <td><img [src]="forecastData[0].logo" alt="Logo de la météo"></td>
+            <td>     </td>
+          </tr>
+          <tr>
+            <td>Description</td>
+            <td>     </td>
+            <td>{{forecastData[0].desc}}</td>
+          </tr>
+          <tr>
+            <td>Température</td>
+            <td>     </td>
+            <td>{{forecastData[0].temp}}</td>
+          </tr>
+          <tr>
+            <td>Ressenti</td>
+            <td>     </td>
+            <td>{{forecastData[0].temp_feels_like}}</td>
+          </tr>
+          <tr>
+            <td>Minimum</td>
+            <td>     </td>
+            <td>{{forecastData[0].temp_min}}</td>
+          </tr>
+          <tr>
+            <td>Maximum</td>
+            <td>     </td>
+            <td>{{forecastData[0].temp_max}}</td>
+          </tr>
+          <tr>
+            <td>Humidité</td>
+            <td>     </td>
+            <td>{{forecastData[0].humidity}}</td>
+          </tr>
+          <tr>
+            <td>Vitesse du vent</td>
+            <td>     </td>
+            <td>{{forecastData[0].wind_speed}}</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+
+  </div>
+
 </div>
 <div><app-map></app-map></div>

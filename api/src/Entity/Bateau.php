@@ -16,78 +16,91 @@ class Bateau
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
+     * @Groups ({"listeBateaux"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups ({"listeBateaux"})
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups ({"listeBateaux"})
      */
     private $type;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups ({"listeBateaux"})
      */
     private $materiau;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups ({"listeBateaux"})
      */
     private $prixAchat;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups ({"listeBateaux"})
      */
     private $longueur;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups ({"listeBateaux"})
      */
     private $largeur;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups ({"listeBateaux"})
      */
     private $poids;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups ({"listeBateaux"})
      */
     private $capacitePersonne;
 
     /**
      * @ORM\OneToOne(targetEntity=HistoireBateau::class, mappedBy="Bateau", cascade={"persist", "remove"})
+     * @Groups ({"listeBateaux"})
      */
     private $histoireBateau;
 
     /**
      * @ORM\OneToOne(targetEntity=LocalisationBateau::class, mappedBy="Bateau", cascade={"persist", "remove"})
+     * @Groups ({"listeBateaux"})
      */
     private $localisationBateau;
 
     /**
      * @ORM\OneToMany(targetEntity=PlanningVisite::class, mappedBy="Bateau")
+     * @Groups ({"listeBateaux"})
      */
     private $planningVisites;
 
     /**
      * @ORM\ManyToOne(targetEntity=Musee::class, inversedBy="Bateau")
+     * @Groups ({"listeBateaux"})
      */
     private $musee;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("temoignage")
+     * @Groups({"temoignage","listeBateaux"})
      */
     private $temoignageAudio;
 
     /**
      * @ORM\Column(type="text")
-     * @Groups("temoignage")
+     * @Groups({"temoignage","listeBateaux"})
      */
     private $temoignageTexte;
 

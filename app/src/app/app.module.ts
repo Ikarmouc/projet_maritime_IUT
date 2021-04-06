@@ -14,9 +14,9 @@ import { MeteoComponent } from './meteo/meteo.component';
     AppComponent,
     MeteoComponent,
     MapComponent,
-    InformationBateauComponent,
+    MenuBasComponent,
     HomeComponent,
-    MenuBasComponent
+    InformationBateauComponent,
   ],
   imports: [
     BrowserModule,
