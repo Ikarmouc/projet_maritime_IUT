@@ -4,6 +4,7 @@ import { MeteoComponent } from './meteo/meteo.component';
 import {InformationBateauComponent} from './information-bateau/information-bateau.component';
 import {MenuBasComponent} from './menu-bas/menu-bas.component';
 import {HomeComponent} from './home/home.component';
+import {ListeBateauComponent} from './liste-bateau/liste-bateau.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path : 'home',
     component : HomeComponent,
+  },
+  {
+    path : 'laflotte',
+    component : ListeBateauComponent,
   },
   {
     path : '',

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient } from '@angular/common/http';
-import {Bateau} from '../../Model/Bateau.model';
-import {HistoireBateau} from '../../Model/HistoireBateau.model';
-import {TemoignagesModel} from '../../Model/Temoignages.model';
+import {Bateau} from '../model/bateau.model';
+import {HistoireBateau} from '../model/histoireBateau.model';
+import {TemoignagesModel} from '../model/Temoignages.model';
 import {Observable} from 'rxjs';
 
 @Injectable({

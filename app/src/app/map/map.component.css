@@ -3,6 +3,7 @@
   height: 250px;
   position: absolute;
   margin: 60px;
+  z-index: 2;
 }
 
 .marker {

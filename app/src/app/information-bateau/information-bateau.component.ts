@@ -2,7 +2,7 @@ import {Component, NgModule, OnInit} from '@angular/core';
 import {InformationBateauxService} from './information-bateaux.service';
 import {ActivatedRoute} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
-import {TemoignagesModel} from '../../Model/Temoignages.model';
+import {TemoignagesModel} from '../model/Temoignages.model';
 import {HistoireBateau} from '../../Model/HistoireBateau.model';
 
 

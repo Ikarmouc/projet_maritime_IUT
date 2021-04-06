@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-// import { Bateau } from '../../../model/bateau.model';
-// import { localisationBateau } from '../../../model/localisationBateau.model';
 import { HttpClient } from '@angular/common/http';
 import {Observable} from 'rxjs';
 
@@ -27,5 +25,9 @@ export class ApiService {
 
   getJoursFermeture(): Observable<any> {
     return this.httpClient.get<string>('http://localhost:9999/api/musee/joursFermeture');
+  }
+
+  getListeBateaux(): Observable<any> {
+    return this.httpClient.get<string>('http://localhost:9999/api/musee/listeBateaux');
   }
 }
