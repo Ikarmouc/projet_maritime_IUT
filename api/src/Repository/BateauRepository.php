@@ -45,6 +45,16 @@ class BateauRepository extends ServiceEntityRepository implements InformationsBa
         return $query->getResult();
     }
 
+    public function getIdAndNameListBateaux()
+    {
+        $query = $this->createQueryBuilder('b')
+            ->select("b.id","b.nom")
+            ->andWhere('b.musee = :val')
+            ->setParameter('val', 1)
+            ->orderBy('b.id', 'ASC')
+            ->getQuery();
+        return $query->getResult();
+    }
     // /**
     //  * @return Bateau[] Returns an array of Bateau objects
     //  */
