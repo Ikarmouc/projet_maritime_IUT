@@ -3,7 +3,7 @@
     <fieldset *ngFor="let myData of bateaux">
       <legend><a href="http://localhost:4200/app/bateaux/infosBateau/{{myData.nomBateau}}">{{myData.nomBateau}}</a></legend>
       <div class="ContenentContainer">
-        <img src="../../assets/img/img_bateau{{myData.id}}.jpg" alt="Image du bateau"/>
+        <img class="listeBateaux" src="../../assets/img/img_bateau{{myData.id}}.jpg" alt="Image du bateau"/>
       </div>
     </fieldset>
   </div>

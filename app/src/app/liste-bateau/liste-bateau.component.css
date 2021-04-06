@@ -39,7 +39,8 @@ legend{
   border-radius: 4px;
   border: solid 2px #30444F;
 }
-img{
+.listeBateaux{
   width: 20%;
-  height: 50%
+  height: 50%;
+  float: left;
 }
