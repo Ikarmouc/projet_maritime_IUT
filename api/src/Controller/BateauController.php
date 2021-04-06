@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Domain\Query\ListeBateauxQuery;
 use App\Repository\BateauRepository;
 use App\Repository\LocalisationBateauRepository;
 use App\Domain\HistoriqueBateaux;
@@ -77,4 +78,16 @@ class BateauController extends AbstractController
         $bateau = $handler->handle($query);
         return $bateau;
     }
+
+    /**
+     * @Rest\View(serializerGroups={"listeLivres"})
+     * @Rest\Get ("/api/musee/listeBateaux", name="listeBateaux")
+     */
+    public function listBateau(BateauRepository $bateauRepo)
+    {
+       $listeBateaux = $bateauRepo->findAll();
+       return $listeBateaux;
+    }
+
+
 }

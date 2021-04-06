@@ -16,78 +16,91 @@ class Bateau
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
+     * @Groups({"ListeLivre"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"ListeLivre"})
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"ListeLivre"})
      */
     private $type;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"ListeLivre"})
      */
     private $materiau;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"ListeLivre"})
      */
     private $prixAchat;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"ListeLivre"})
      */
     private $longueur;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"ListeLivre"})
      */
     private $largeur;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"ListeLivre"})
      */
     private $poids;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"ListeLivre"})
      */
     private $capacitePersonne;
 
     /**
      * @ORM\OneToOne(targetEntity=HistoireBateau::class, mappedBy="Bateau", cascade={"persist", "remove"})
+     * @Groups({"ListeLivre"})
      */
     private $histoireBateau;
 
     /**
      * @ORM\OneToOne(targetEntity=LocalisationBateau::class, mappedBy="Bateau", cascade={"persist", "remove"})
+     * @Groups({"ListeLivre"})
      */
     private $localisationBateau;
 
     /**
      * @ORM\OneToMany(targetEntity=PlanningVisite::class, mappedBy="Bateau")
+     * @Groups({"ListeLivre"})
      */
     private $planningVisites;
 
     /**
      * @ORM\ManyToOne(targetEntity=Musee::class, inversedBy="Bateau")
+     * @Groups({"ListeLivre"})
      */
     private $musee;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("temoignage")
+     * @Groups({"temoignage","ListeLivre"})
      */
     private $temoignageAudio;
 
     /**
      * @ORM\Column(type="text")
-     * @Groups("temoignage")
+     * @Groups({"ListeLivre","temoignage"})
      */
     private $temoignageTexte;
 
