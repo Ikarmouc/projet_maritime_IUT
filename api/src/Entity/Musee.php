@@ -31,6 +31,11 @@ class Musee
     /**
      * @ORM\Column(type="string", length=255)
      */
+    private $image;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private $joursFermeture;
 
     /**
@@ -47,11 +52,6 @@ class Musee
      * @ORM\OneToMany(targetEntity=Bateau::class, mappedBy="musee")
      */
     private $Bateau;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $image;
 
     public function __construct()
     {

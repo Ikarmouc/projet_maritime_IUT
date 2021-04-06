@@ -19,7 +19,6 @@ h1 {
 
 .horaires {
   margin: auto;
-  max-width: 400px;
   border: 1px solid white;
   border-radius: 10px;
 }
@@ -27,3 +26,68 @@ h1 {
 .white {
   color: white;
 }
+
+a {
+  text-decoration: none;
+}
+
+.contentInfos {
+  display:flex;
+  justify-content: space-evenly;
+  color: white;
+}
+
+fieldset{
+  border-radius: 10px;
+  font-family: Calibri;
+  width: 250px;
+  margin: 20px;
+  justify-content: space-between;
+  flex-direction: row;
+  color: white;
+  background-color: #739ED6;
+  border: solid 4px #30444F;
+}
+
+.MainContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+legend{
+  background-color: #30444F;
+  border-radius: 4px;
+  border: solid 2px #30444F;
+}
+
+td:nth-child(1) {
+  text-align: right;
+}
+
+td:nth-child(even) {
+  color: white;
+}
+
+td:nth-child(3) {
+  text-align: left;
+}
+
+.MeteoTable{
+  margin:0 auto;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+tr{
+  margin: 100px;
+}
+
+tr:nth-child(even){
+  background-color: #b3ccff;
+  color: black;
+}
+
+
